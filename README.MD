@@ -1,1 +1,1 @@
-My mini framework
+My mini js library
