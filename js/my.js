@@ -16,7 +16,6 @@ $('.delete-button').on('click', function () {
 
 // find, on, off, each, attr, toggleClass, addClass, removeClass*/
 
-
 function $(str){
     let arr = document.querySelectorAll(str);
 
