@@ -74,8 +74,7 @@ var $ = (function () {
             this.elems.forEach(item => {
                 if (item.memorize[strEvent]){
                     item.memorize[strEvent].forEach( arrFunc => {
-                        console.log(item);
-                        item.removeEventListener("strEvent", arrFunc);
+                        item.removeEventListener(strEvent, arrFunc);
                     });
                     item.memorize[strEvent].length = 0;
                 }
