@@ -79,6 +79,13 @@ var $ = (function () {
                     item.memorize[strEvent].length = 0;
                 }
             })
+            return this;
+        },
+        each : function(callback){
+            this.elems.forEach(item => {
+                callback(item);
+            });
+            return this;
         }
     };
     return myPlugin;
