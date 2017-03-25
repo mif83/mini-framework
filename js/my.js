@@ -92,7 +92,7 @@ var $ = (function () {
     return myPlugin;
 }());
 
-// проверки
+// tests
 $(".d2").find(".i1").toggleClass("active");
 $(".d2").find(".i1").on("click", function(){alert("1111")}).on("click", function(){console.log("click")}).each(item => item.innerHTML += "!!!!!").addClass("cccca");
 $(".d2").find(".i1").off("click");
