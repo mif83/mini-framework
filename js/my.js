@@ -1,21 +1,6 @@
 /**
  * Created by dima on 24.03.2017.
  */
-/*// addEventListener, closure, setAttribute, removeAttribute, removeEventListener, querySelectorAll, querySelector
-
-$('.items').find('.items--subitems').on('click', function (event) {
-    console.log(event.target.textContent);
-}).each(function (elem, index) {
-    elem.textContent = index;
-}).attr('title', 'qwewqeqe');
-
-$('.delete-button').on('click', function () {
-    $('.items--subitems').off('click');
-});
-
-
-// find, on, off, each, attr, toggleClass, addClass, removeClass*/
-
 
 var $ = (function () {
     this.eventMemorizer = {};
@@ -98,9 +83,18 @@ var $ = (function () {
         removeClass : function (className) {
             this.elems.forEach(item => item.classList.remove(className));
             return this;
+        },
+        toggleClass : function (className) {
+            this.elems.forEach(item => item.classList.toggle(className));
+            return this;
         }
     };
     return myPlugin;
 }());
+
+// проверки
+$(".d2").find(".i1").toggleClass("active");
+$(".d2").find(".i1").on("click", function(){alert("1111")}).on("click", function(){console.log("click")}).each(item => item.innerHTML += "!!!!!").addClass("cccca");
+$(".d2").find(".i1").off("click");
 
 
