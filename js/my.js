@@ -94,6 +94,10 @@ var $ = (function () {
         addClass : function (className) {
             this.elems.forEach(item => item.classList.add(className));
             return this;
+        },
+        removeClass : function (className) {
+            this.elems.forEach(item => item.classList.remove(className));
+            return this;
         }
     };
     return myPlugin;
