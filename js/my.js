@@ -90,6 +90,10 @@ var $ = (function () {
         attr : function (attrName, attrProp) {
             this.elems.forEach(item => item.setAttribute(attrName, attrProp));
             return this;
+        },
+        addClass : function (className) {
+            this.elems.forEach(item => item.classList.add(className));
+            return this;
         }
     };
     return myPlugin;
