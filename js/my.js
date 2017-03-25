@@ -86,6 +86,10 @@ var $ = (function () {
                 callback(item);
             });
             return this;
+        },
+        attr : function (attrName, attrProp) {
+            this.elems.forEach(item => item.setAttribute(attrName, attrProp));
+            return this;
         }
     };
     return myPlugin;
